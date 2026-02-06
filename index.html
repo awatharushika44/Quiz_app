@@ -1,0 +1,69 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizzy Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SPLASH SCREEN -->
+<div id="splash-screen" class="screen active">
+  <div class="splash-card">
+    <div class="splash-left">
+      <img src="https://img.freepik.com/premium-vector/curiosity-brain-concept-illustration_114360-11037.jpg?w=360" alt="Brain Image">
+    </div>
+    <div class="splash-right">
+      <h1>WELCOME TO QUIZZY</h1>
+      <p>Test your knowledge and challenge yourself! 🧠✨</p>
+
+      <label>Select number of questions</label>
+      <select id="question-count">
+        <option value="5">5 Questions</option>
+        <option value="10" selected>10 Questions</option>
+        <option value="15">15 Questions</option>
+        <option value="20">20 Questions</option>
+      </select>
+
+      <button id="start-btn">Start Quiz</button>
+      <p id="high-score">Highest Score: 0</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ SCREEN -->
+<div id="quiz-screen" class="screen">
+  <div class="top-bar">
+    <h2>Quizzy Pro</h2>
+    <div class="progress-container">
+      <span id="progress">Question 1/10</span>
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+    <span id="timer">15s</span>
+  </div>
+
+  <div id="quiz-container">
+    <div class="question-card-wrapper"></div>
+  </div>
+</div>
+
+<!-- RESULT SCREEN -->
+<div id="result-screen" class="screen">
+  <div class="result-card">
+    <h1>🎉 Quiz Completed!</h1>
+    <p id="final-score">Your Score: 0 / 0</p>
+    <p id="final-highscore">Highest Score: 0</p>
+    <button onclick="location.reload()">Play Again</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
